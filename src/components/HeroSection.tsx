@@ -9,6 +9,14 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-dark opacity-60" />
 
     <div className="relative z-10 text-center px-6 max-w-4xl">
+      <motion.img
+        src={hrLogo}
+        alt="HR Logo"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1, duration: 0.6 }}
+        className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6"
+      />
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

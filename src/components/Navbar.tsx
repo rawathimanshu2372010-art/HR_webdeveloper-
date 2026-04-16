@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import hrLogo from "@/assets/hr-logo.png";
 
 const navLinks = ["Home", "About", "Experience", "Services", "Charges", "Contact"];
 
@@ -19,9 +20,12 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 backdrop-blur-xl bg-background/80"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <button onClick={() => scrollTo("home")} className="text-2xl font-bold font-[var(--font-display)]">
-          <span className="text-gradient-gold">HR</span>{" "}
-          <span className="text-foreground">Webdeveloper</span>
+        <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
+          <img src={hrLogo} alt="HR Logo" className="w-9 h-9" />
+          <span className="text-lg font-bold font-[var(--font-display)]">
+            <span className="text-gradient-gold">HR</span>{" "}
+            <span className="text-foreground">Webdeveloper</span>
+          </span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

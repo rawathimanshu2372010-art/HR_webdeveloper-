@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, ArrowDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import hrLogo from "@/assets/hr-logo.png";
 
 const HeroSection = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">

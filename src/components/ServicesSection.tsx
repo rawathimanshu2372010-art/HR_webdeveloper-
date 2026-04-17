@@ -1,36 +1,12 @@
 import { motion } from "framer-motion";
 
 const videos = [
-  {
-    title: "E-Commerce Website",
-    tag: "Online Store",
-    src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
-  },
-  {
-    title: "Business Portfolio",
-    tag: "Portfolio",
-    src: "https://download.samplelib.com/mp4/sample-5s.mp4",
-  },
-  {
-    title: "Restaurant Website",
-    tag: "Food & Dining",
-    src: "https://test-videos.co.uk/vids/sintel/mp4/h264/360/Sintel_360_10s_1MB.mp4",
-  },
-  {
-    title: "Startup Landing Page",
-    tag: "Startup",
-    src: "https://download.samplelib.com/mp4/sample-10s.mp4",
-  },
-  {
-    title: "Mobile App Showcase",
-    tag: "Mobile App",
-    src: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/360/Jellyfish_360_10s_1MB.mp4",
-  },
-  {
-    title: "Travel Booking Site",
-    tag: "Travel",
-    src: "https://download.samplelib.com/mp4/sample-15s.mp4",
-  },
+  { title: "E-Commerce Website", tag: "Online Store", src: "/videos/demo1.mp4" },
+  { title: "Business Portfolio", tag: "Portfolio", src: "/videos/demo2.mp4" },
+  { title: "Restaurant Website", tag: "Food & Dining", src: "/videos/demo3.mp4" },
+  { title: "Startup Landing Page", tag: "Startup", src: "/videos/demo4.mp4" },
+  { title: "Mobile App Showcase", tag: "Mobile App", src: "/videos/demo5.mp4" },
+  { title: "Travel Booking Site", tag: "Travel", src: "/videos/demo6.mp4" },
 ];
 
 const ServicesSection = () => (

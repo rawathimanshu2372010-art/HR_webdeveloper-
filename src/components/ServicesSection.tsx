@@ -4,38 +4,32 @@ const videos = [
   {
     title: "E-Commerce Website",
     tag: "Online Store",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg",
+    src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
   },
   {
     title: "Business Portfolio",
     tag: "Portfolio",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg",
+    src: "https://download.samplelib.com/mp4/sample-5s.mp4",
   },
   {
     title: "Restaurant Website",
     tag: "Food & Dining",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
+    src: "https://test-videos.co.uk/vids/sintel/mp4/h264/360/Sintel_360_10s_1MB.mp4",
   },
   {
     title: "Startup Landing Page",
     tag: "Startup",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+    src: "https://download.samplelib.com/mp4/sample-10s.mp4",
   },
   {
     title: "Mobile App Showcase",
     tag: "Mobile App",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerMeltdowns.jpg",
+    src: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/360/Jellyfish_360_10s_1MB.mp4",
   },
   {
     title: "Travel Booking Site",
     tag: "Travel",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+    src: "https://download.samplelib.com/mp4/sample-15s.mp4",
   },
 ];
 
@@ -70,7 +64,6 @@ const ServicesSection = () => (
             <div className="aspect-video relative overflow-hidden">
               <video
                 src={v.src}
-                poster={v.poster}
                 autoPlay
                 loop
                 muted

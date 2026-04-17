@@ -4,22 +4,38 @@ const videos = [
   {
     title: "E-Commerce Website",
     tag: "Online Store",
-    src: "https://videos.pexels.com/video-files/5532767/5532767-sd_640_360_25fps.mp4",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg",
   },
   {
     title: "Business Portfolio",
     tag: "Portfolio",
-    src: "https://videos.pexels.com/video-files/6804116/6804116-sd_640_360_25fps.mp4",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg",
   },
   {
     title: "Restaurant Website",
     tag: "Food & Dining",
-    src: "https://videos.pexels.com/video-files/5752729/5752729-sd_640_360_25fps.mp4",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
   },
   {
-    title: "Landing Page Design",
+    title: "Startup Landing Page",
     tag: "Startup",
-    src: "https://videos.pexels.com/video-files/3130284/3130284-sd_640_360_30fps.mp4",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+  },
+  {
+    title: "Mobile App Showcase",
+    tag: "Mobile App",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerMeltdowns.jpg",
+  },
+  {
+    title: "Travel Booking Site",
+    tag: "Travel",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
   },
 ];
 
@@ -54,10 +70,12 @@ const ServicesSection = () => (
             <div className="aspect-video relative overflow-hidden">
               <video
                 src={v.src}
+                poster={v.poster}
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="w-full h-full object-cover"
               />
               <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium backdrop-blur-sm">

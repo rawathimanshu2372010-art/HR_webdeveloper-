@@ -19,16 +19,17 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 backdrop-blur-xl bg-background/80"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={hrLogo} alt="HR Logo" className="w-9 h-9" />
-          <span className="text-lg font-bold font-[var(--font-display)]">
-            <span className="text-gradient-gold">HR</span>{" "}
-            <span className="text-foreground">Webdeveloper</span>
-          </span>
+      <div className="max-w-7xl mx-auto grid grid-cols-[1fr_auto_1fr] items-center px-6 py-4">
+        <span className="hidden md:block text-lg font-bold font-[var(--font-display)] justify-self-start">
+          <span className="text-gradient-gold">HR</span>{" "}
+          <span className="text-foreground">Webdeveloper</span>
+        </span>
+
+        <button onClick={() => scrollTo("home")} className="flex items-center justify-center md:col-start-2">
+          <img src={hrLogo} alt="HR Logo" className="w-10 h-10" />
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 justify-self-end">
           {navLinks.map((l) => (
             <button
               key={l}
@@ -46,7 +47,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground justify-self-end">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

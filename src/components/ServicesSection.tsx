@@ -1,26 +1,12 @@
 import { motion } from "framer-motion";
 
 const videos = [
-  {
-    title: "E-Commerce Website",
-    tag: "Online Store",
-    src: "https://videos.pexels.com/video-files/5532767/5532767-sd_640_360_25fps.mp4",
-  },
-  {
-    title: "Business Portfolio",
-    tag: "Portfolio",
-    src: "https://videos.pexels.com/video-files/6804116/6804116-sd_640_360_25fps.mp4",
-  },
-  {
-    title: "Restaurant Website",
-    tag: "Food & Dining",
-    src: "https://videos.pexels.com/video-files/5752729/5752729-sd_640_360_25fps.mp4",
-  },
-  {
-    title: "Landing Page Design",
-    tag: "Startup",
-    src: "https://videos.pexels.com/video-files/3130284/3130284-sd_640_360_30fps.mp4",
-  },
+  { title: "E-Commerce Website", tag: "Online Store", src: "/videos/demo1.mp4" },
+  { title: "Business Portfolio", tag: "Portfolio", src: "/videos/demo2.mp4" },
+  { title: "Restaurant Website", tag: "Food & Dining", src: "/videos/demo3.mp4" },
+  { title: "Startup Landing Page", tag: "Startup", src: "/videos/demo4.mp4" },
+  { title: "Mobile App Showcase", tag: "Mobile App", src: "/videos/demo5.mp4" },
+  { title: "Travel Booking Site", tag: "Travel", src: "/videos/demo6.mp4" },
 ];
 
 const ServicesSection = () => (
@@ -58,6 +44,7 @@ const ServicesSection = () => (
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="w-full h-full object-cover"
               />
               <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium backdrop-blur-sm">

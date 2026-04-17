@@ -47,7 +47,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground justify-self-end">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

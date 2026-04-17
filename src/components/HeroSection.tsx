@@ -11,11 +11,11 @@ const HeroSection = () => (
     <div className="relative z-10 text-center px-6 max-w-4xl">
       <motion.img
         src={hrLogo}
-        alt="HR Logo"
+        alt="HR Webdeveloper Logo"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.1, duration: 0.6 }}
-        className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6"
+        className="w-44 h-44 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto mb-8 drop-shadow-2xl"
       />
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -30,9 +30,9 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
+        className="flex items-center justify-center flex-wrap gap-3 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
       >
-        <span className="text-gradient-gold">HR</span>{" "}
+        <img src={hrLogo} alt="" className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 inline-block" />
         <span className="text-foreground">Webdeveloper</span>
       </motion.h1>
 

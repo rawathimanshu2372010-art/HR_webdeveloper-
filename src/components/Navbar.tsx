@@ -10,8 +10,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
   const scrollTo = (id: string) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
+    const target = id.toLowerCase();
+    setTimeout(() => {
+      const el = document.getElementById(target);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top, behavior: "smooth" });
+      } else if (target === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (

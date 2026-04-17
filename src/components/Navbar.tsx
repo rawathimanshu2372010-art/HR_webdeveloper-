@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import hrLogo from "@/assets/hr-logo.png";
+import SignInDialog from "./SignInDialog";
 
 const navLinks = ["Home", "About", "Experience", "Services", "Charges", "Contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
   const scrollTo = (id: string) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);

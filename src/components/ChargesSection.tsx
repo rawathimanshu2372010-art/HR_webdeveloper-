@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Star } from "lucide-react";
+import { Check, Star, CreditCard, Smartphone, Wallet, Building2 } from "lucide-react";
 
 const plans = [
   {

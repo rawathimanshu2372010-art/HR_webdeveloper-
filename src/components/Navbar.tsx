@@ -15,6 +15,8 @@ const Navbar = () => {
   };
 
   return (
+    <>
+    <SignInDialog open={signInOpen} onOpenChange={setSignInOpen} />
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
@@ -42,7 +44,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={() => setSignInOpen(true)}
             className="px-5 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             Sign In
@@ -68,11 +70,18 @@ const Navbar = () => {
                   {l}
                 </button>
               ))}
+              <button
+                onClick={() => { setSignInOpen(true); setOpen(false); }}
+                className="mt-2 px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold"
+              >
+                Sign In
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>
+    </>
   );
 };
 

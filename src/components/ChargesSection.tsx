@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Star } from "lucide-react";
+import { Check, Star, CreditCard, Smartphone, Wallet, Building2 } from "lucide-react";
 
 const plans = [
   {
@@ -86,6 +86,43 @@ const ChargesSection = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-20 text-center"
+      >
+        <p className="text-primary uppercase tracking-[0.2em] text-sm mb-3">Online Payment</p>
+        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          Pay <span className="text-gradient-gold">Online</span> Securely
+        </h3>
+        <p className="text-muted-foreground max-w-xl mx-auto mb-10">
+          We accept all major online payment methods for your convenience.
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {[
+            { icon: Smartphone, label: "UPI / GPay", desc: "PhonePe, Paytm, GPay" },
+            { icon: CreditCard, label: "Card", desc: "Visa, Mastercard, RuPay" },
+            { icon: Building2, label: "Net Banking", desc: "All major banks" },
+            { icon: Wallet, label: "Wallets", desc: "Paytm, Amazon Pay" },
+          ].map(({ icon: Icon, label, desc }) => (
+            <div key={label} className="rounded-xl p-6 border border-border bg-card hover:border-primary transition-colors">
+              <Icon className="w-10 h-10 text-primary mx-auto mb-3" />
+              <p className="font-semibold text-foreground mb-1">{label}</p>
+              <p className="text-xs text-muted-foreground">{desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href="tel:8817830829"
+          className="inline-block mt-10 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold glow-gold hover:opacity-90 transition-opacity"
+        >
+          Pay Online Now
+        </a>
+      </motion.div>
     </div>
   </section>
 );

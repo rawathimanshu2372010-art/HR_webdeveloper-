@@ -6,7 +6,7 @@ import expTeam from "@/assets/exp-team.jpg";
 const stats = [
   { icon: Briefcase, value: "5+", label: "Years Experience" },
   { icon: Users, value: "200+", label: "Happy Clients" },
-  { icon: Globe, value: "350+", label: "Websites" },
+  { icon: Globe, value: "500+", label: "Websites" },
   { icon: Award, value: "99%", label: "Satisfaction" },
 ];
 

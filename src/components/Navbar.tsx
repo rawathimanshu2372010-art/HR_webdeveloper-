@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import hrLogo from "@/assets/hr-logo.png";
-import SignInDialog from "./SignInDialog";
 
 const navLinks = ["Home", "About", "Experience", "Services", "Charges", "Contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [signInOpen, setSignInOpen] = useState(false);
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     setOpen(false);
     const target = id.toLowerCase();
@@ -25,7 +25,6 @@ const Navbar = () => {
 
   return (
     <>
-    <SignInDialog open={signInOpen} onOpenChange={setSignInOpen} />
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
@@ -51,7 +50,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            onClick={() => setSignInOpen(true)}
+            onClick={() => navigate("/signin")}
             className="px-5 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             Sign In
@@ -78,7 +77,7 @@ const Navbar = () => {
                 </button>
               ))}
               <button
-                onClick={() => { setSignInOpen(true); setOpen(false); }}
+                onClick={() => { navigate("/signin"); setOpen(false); }}
                 className="mt-2 px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold"
               >
                 Sign In

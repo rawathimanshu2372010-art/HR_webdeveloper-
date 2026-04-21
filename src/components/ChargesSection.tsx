@@ -11,14 +11,14 @@ const plans = [
   },
   {
     name: "Business",
-    price: "₹25,000",
+    price: "₹15,000",
     desc: "Multi-page business site",
     features: ["Up to 10 Pages", "Custom Design", "SEO Optimized", "Admin Panel", "3 Revisions", "Delivery in 7 Days"],
     featured: true,
   },
   {
     name: "Enterprise",
-    price: "₹50,00,000",
+    price: "₹25,000",
     desc: "Full-scale web application",
     features: ["Unlimited Pages", "E-Commerce / App", "Custom Backend", "Payment Integration", "Unlimited Revisions", "Priority Support"],
     featured: false,
@@ -39,8 +39,21 @@ const ChargesSection = () => (
           Our <span className="text-gradient-gold">Charges</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Minimum ₹5,000 to Maximum ₹50 Lakhs — it depends on your project requirements.
+          Affordable pricing — it depends on your project requirements.
         </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-10 max-w-md mx-auto rounded-xl p-5 border border-primary bg-card text-center glow-gold"
+      >
+        <p className="text-primary uppercase tracking-[0.2em] text-xs mb-2">Additional Charge</p>
+        <p className="text-foreground font-semibold">
+          Admin Charge: <span className="text-gradient-gold text-2xl font-bold">₹500</span>
+        </p>
+        <p className="text-muted-foreground text-xs mt-1">Applied separately on every plan</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
